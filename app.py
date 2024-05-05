@@ -9,7 +9,7 @@ app = Flask(__name__)
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
-# Route the app to the home page
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -71,6 +71,6 @@ def webcam():
             
 
 
-# run the app
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
